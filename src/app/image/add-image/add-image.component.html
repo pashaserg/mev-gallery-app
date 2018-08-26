@@ -1,0 +1,27 @@
+<h3 class="text-center">Add Image</h3>
+<form [formGroup]="newImageForm" (ngSubmit)="addImage(newImageForm.value)">
+
+  <mat-form-field class="w-100">
+    <input matInput formControlName="src" placeholder="Src (http://...)">
+    <mat-error *ngIf="newImageForm.controls.src.hasError('required')">
+      Field is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-100">
+    <input matInput formControlName="description" placeholder="Description">
+    <mat-hint align="end">
+      {{ newImageForm.controls.description.value?.length || 0 }}/50
+    </mat-hint>
+    <mat-error *ngIf="newImageForm.controls.description.hasError('required')">
+      Field is required
+    </mat-error>
+    <mat-error *ngIf="newImageForm.controls.description.hasError('maxlength')">
+        Exceeded the maximum number of characters
+    </mat-error>
+  </mat-form-field>
+
+  <div class="btn-submit">
+    <button class="w-100" mat-button [disabled]="!newImageForm.valid">Add Image</button>
+  </div>
+</form>

@@ -3,3 +3,8 @@
 .pointer{
     cursor: pointer;
 }
+
+.custom-dialog-container .mat-dialog-container {
+    padding: 5px;
+    padding-bottom: 9px; 
+}

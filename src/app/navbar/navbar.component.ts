@@ -1,25 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-
-const NAV_LINKS = [
-  {
-    title: 'Home',
-    link: ['#'],
-  }
-]
+import { Component } from '@angular/core';
+import { ImagesService } from '../image/images.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AddImageComponent } from '../image/add-image/add-image.component';
 
 @Component({
   selector: 'mev-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
-
-  nav_links = NAV_LINKS;
-  
+export class NavbarComponent {
   title = 'Gallery';
-  constructor() { }
 
-  ngOnInit() {
+  constructor(
+    private imagesService: ImagesService,
+    private dialog: MatDialog) { }
+
+  openAddImageDialog() {
+    const dialogRef = this.dialog.open(AddImageComponent, {
+      width: '400px'
+    });
   }
 
 }

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Img } from './models/img.model';
-import { ImagesService } from './images.service';
+import { ImagesService } from '../image/images.service';
 import { FullsizeImageComponent } from './fullsize-image/fullsize-image.component';
 import { MatDialog } from '@angular/material/dialog';
+import { Img } from '../image/models/img.model';
 
 @Component({
   selector: 'mev-content',
@@ -23,9 +23,13 @@ export class ContentComponent implements OnInit {
 
   openImage(img: Img) {
     const dialogRef = this.dialog.open(FullsizeImageComponent, {
-      // maxHeight: '90vh',
-      data: img
+      data: img,
+      panelClass: 'custom-dialog-container'
     });
-
   }
+
+  removeImage(img: Img) {
+    this.imagesService.removeImage(img);
+  }
+
 }

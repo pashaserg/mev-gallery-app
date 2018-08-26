@@ -6,6 +6,9 @@
     <div class="row">
       <div *ngFor="let img of images" class="col-md-6 col-lg-4">
         <div class="card border-0 transform-on-hover">
+          <button (click)="removeImage(img)" class="close delete-image" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <a class="lightbox" (click)="openImage(img)">
             <img [src]="img.src" alt="Card Image" class="card-img-top pointer">
           </a>

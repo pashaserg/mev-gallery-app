@@ -1,19 +1,25 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatDialogModule } from "@angular/material/dialog"
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
-import { AppComponent } from "./app.component";
-import { NavbarComponent } from "./navbar/navbar.component";
-import { HeaderComponent } from "./header/header.component";
-import { ContentComponent } from "./content/content.component";
-import { FooterComponent } from "./footer/footer.component";
-import { ImagesService } from "./content/images.service";
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HeaderComponent } from './header/header.component';
+import { ContentComponent } from './content/content.component';
+import { FooterComponent } from './footer/footer.component';
 import { FullsizeImageComponent } from './content/fullsize-image/fullsize-image.component';
+import { AddImageComponent } from './image/add-image/add-image.component';
+import { ImagesService } from './image/images.service';
 
 const appRoutes: Routes = [
-  { path: "", component: AppComponent }
+  { path: '', component: ContentComponent },
+  { path: '**', component: ContentComponent }
 ];
 
 @NgModule({
@@ -23,19 +29,25 @@ const appRoutes: Routes = [
     HeaderComponent,
     ContentComponent,
     FooterComponent,
-    FullsizeImageComponent
+    FullsizeImageComponent,
+    AddImageComponent
   ],
   imports: [
-    BrowserModule,
     RouterModule.forRoot(appRoutes),
+    BrowserModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [
     ImagesService
   ],
   entryComponents: [
-    FullsizeImageComponent
+    FullsizeImageComponent,
+    AddImageComponent
   ],
   bootstrap: [AppComponent]
 })
