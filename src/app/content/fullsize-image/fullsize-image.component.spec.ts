@@ -1,25 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FullsizeImageComponent } from './fullsize-image.component';
+// import { FullsizeImageComponent } from './fullsize-image.component';
 
-describe('FullsizeImageComponent', () => {
-  let component: FullsizeImageComponent;
-  let fixture: ComponentFixture<FullsizeImageComponent>;
+// describe('FullsizeImageComponent', () => {
+//   let component: FullsizeImageComponent;
+//   let fixture: ComponentFixture<FullsizeImageComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FullsizeImageComponent ]
-    })
-    .compileComponents();
-  }));
+//   beforeEach(async(() => {
+//     TestBed.configureTestingModule({
+//       declarations: [ FullsizeImageComponent ]
+//     })
+//     .compileComponents();
+//   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(FullsizeImageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(FullsizeImageComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

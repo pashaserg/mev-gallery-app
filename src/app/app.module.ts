@@ -17,9 +17,9 @@ import { FullsizeImageComponent } from './content/fullsize-image/fullsize-image.
 import { AddImageComponent } from './image/add-image/add-image.component';
 import { ImagesService } from './image/images.service';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   { path: '', component: ContentComponent },
-  { path: '**', component: ContentComponent }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
