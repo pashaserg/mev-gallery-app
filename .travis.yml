@@ -12,6 +12,5 @@ addons:
   chrome: stable
 
 script:
-  - ng lint
-  - ng test:headless
+  - ng test
   - ng build --prod
