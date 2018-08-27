@@ -1,24 +1,17 @@
-dist: trusty
-sudo: false
-
 language: node_js
 node_js:
   - "8"
-
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+dist: trusty
+sudo: false
 
 cache:
   directories:
-     - ./node_modules
+    - node_modules
 
-install:
-  - npm install
+addons:
+  chrome: stable
 
 script:
-  - ng build --prod
-  - ng test
+  - npm run lint
+  - npm run test:headless
+  - npm run build
