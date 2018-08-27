@@ -10,7 +10,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
           <a class="lightbox" (click)="openImage(img)">
-            <img [src]="img.src" alt="Card Image" class="card-img-top pointer">
+            <img [src]="img.src" [alt]="img.description" width="300" height="300" class="card-img-top pointer">
           </a>
           <div class="card-body">
             <h6>

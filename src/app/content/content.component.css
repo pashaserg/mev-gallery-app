@@ -54,6 +54,10 @@
   top: 10px
 }
 
+.gallery-block {
+  min-height: 500px;
+}
+
 @media (min-width: 576px) {
   .gallery-block .transform-on-hover:hover {
     transform: translateY(-10px) scale(1.02);
