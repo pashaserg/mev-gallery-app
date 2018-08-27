@@ -17,4 +17,5 @@ before_script:
   - sleep 3 
 
 script:
+  - ng build --prod
   - ng test
