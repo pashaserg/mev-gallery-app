@@ -1,23 +1,9 @@
 <section class="gallery-block cards-gallery py-10">
   <div class="container-fluid">
-    <div class="heading">
-      <h1>Gallery</h1>
-    </div>
+    <h1 class="text-center">Gallery</h1>
     <div class="row">
       <div *ngFor="let img of images" class="col-md-6 col-lg-4">
-        <div class="card border-0 transform-on-hover">
-          <button (click)="removeImage(img)" class="close delete-image" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <a class="lightbox" (click)="openImage(img)">
-            <img [src]="img.src" [alt]="img.description" width="300" height="300" class="card-img-top pointer">
-          </a>
-          <div class="card-body">
-            <h6>
-              <a class="pointer" (click)="openImage(img)">{{ img.description }}</a>
-            </h6>
-          </div>
-        </div>
+        <mev-image-card [image]="img"></mev-image-card>
       </div>
     </div>
   </div>

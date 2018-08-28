@@ -47,7 +47,6 @@ export class ImagesService {
     addImage(img: Img) {
         img.id = this.getNewId();
         this.images.push(img);
-        console.log(this.images);
 
         this.saveChanges();
     }

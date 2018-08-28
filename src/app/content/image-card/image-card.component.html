@@ -1,0 +1,13 @@
+<div class="card border-0 transform-on-hover">
+  <button (click)="removeImage(image)" class="close delete-image" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <a class="lightbox" (click)="openImage(image)">
+    <img [src]="image.src" [alt]="image.description" width="300" height="300" class="card-img-top pointer">
+  </a>
+  <div class="card-body">
+    <h6>
+      <a class="pointer" (click)="openImage(image)">{{ image.description }}</a>
+    </h6>
+  </div>
+</div>

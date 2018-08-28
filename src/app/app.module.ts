@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FullsizeImageComponent } from './content/fullsize-image/fullsize-image.component';
 import { AddImageComponent } from './image/add-image/add-image.component';
 import { ImagesService } from './image/images.service';
+import { ImageCardComponent } from './content/image-card/image-card.component';
 
 export const appRoutes: Routes = [
   { path: '', component: ContentComponent },
@@ -30,7 +31,8 @@ export const appRoutes: Routes = [
     ContentComponent,
     FooterComponent,
     FullsizeImageComponent,
-    AddImageComponent
+    AddImageComponent,
+    ImageCardComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
