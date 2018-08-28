@@ -31,12 +31,6 @@ const initialItems = [
 export class ImagesService {
     private images: Img[] = JSON.parse(localStorage.getItem("images")); //dummy db
 
-    private lastId = initialItems[initialItems.length - 1].id;
-
-    private getNewId(): number {
-        return  ++this.lastId;
-    }
-
     getImages() {
         if (!this.images) {
             this.images = initialItems;
@@ -45,7 +39,7 @@ export class ImagesService {
     }
 
     addImage(img: Img) {
-        img.id = this.getNewId();
+        img.id = new Date().getTime();
         this.images.push(img);
 
         this.saveChanges();
