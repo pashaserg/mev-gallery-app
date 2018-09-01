@@ -1,4 +1,4 @@
-import { Img } from "./img.model";
+import { Img } from './img.model';
 
 describe('Img', () => {
     it('should create an instance of Img', () => {
@@ -14,4 +14,4 @@ describe('Img', () => {
         expect(image.src).toEqual('google.com');
         expect(image.description).toEqual('description');
     });
-})
+});

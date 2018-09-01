@@ -7,8 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "test:once": "karma start karma.conf.js --single-run"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

@@ -54,6 +54,6 @@ export class ImagesService {
 
     saveChanges(): void {
         var serialObj = JSON.stringify(this.images);
-        localStorage.setItem("images", serialObj);
+        localStorage.setItem('images', serialObj);
     }
 }

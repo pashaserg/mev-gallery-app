@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { AddImageComponent } from '../image/add-image/add-image.component';
 
 @Component({
-  selector: 'mev-navbar',
+  selector: 'app-mev-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
