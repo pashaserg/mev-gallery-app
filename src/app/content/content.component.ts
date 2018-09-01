@@ -4,7 +4,7 @@ import { ImagesService } from '../image/images.service';
 import { Img } from '../image/models/img.model';
 
 @Component({
-  selector: 'mev-content',
+  selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
